@@ -4,23 +4,22 @@ import random
 n = int(input('Ввудите длину списка: '))
 lisrFirst = []
 listRandom = []
+listCopy = []
 
 for i in range(n):
   i = input(f'Введите {i} позицию списка: ')
   lisrFirst.append(i)
+  
+listCopy = lisrFirst.copy()
 
-b = True         
 x = 0 
-while x != n-1:                 # Цикл рандомного заполнения
+while x != n:                 # Цикл рандомного заполнения
   j = random.choice(lisrFirst) 
   
-  if b == True:                # Условие 1го присваивание рандомного значаение
+  if (j in listCopy ):   # условия проверки на повтор
     listRandom.append(j)
-    b = False
-  
-  if (j in listRandom) == False:   # условия проверки на повтор
-    listRandom.append(j)
+    listCopy.remove(j)
     x+=1 
 
-print(lisrFirst)
-print(listRandom)
+print('Вводимый список = ', lisrFirst)
+print('Рамдомный список = ', listRandom)
