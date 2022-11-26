@@ -13,8 +13,8 @@ for i in range(1,n+1):
   
 # Через цикл while
 
-# i = 1
-# while i != n+1:
+# i = 0
+# while i != n:
 #     result *=i
 #     i+=1
 #     print(result, end=' ')

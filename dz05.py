@@ -8,7 +8,6 @@ listRandom = []
 for i in range(n):
   i = input(f'Введите {i} позицию списка: ')
   lisrFirst.append(i)
-  
 
 b = True         
 x = 0 
